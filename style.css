@@ -28,13 +28,12 @@ body {
   max-width: 45%;
   box-shadow: 3px 3px 8px lightgray;
   border: none;
-  z-index: 1;
 }
 
 .personal-info .author-name {
   position: absolute;
   font-size: 5rem;
-  z-index: 2;
+  z-index: 1;
   left: 6%;
   top: calc(80vh - 20%);
   color: white;
@@ -183,7 +182,7 @@ body {
   margin: 0;
 }
 
-.contact-details > *{
+.contact-details > * {
   margin-bottom: 10%;
 }
 
@@ -267,16 +266,18 @@ body {
 
   .personal-info .author-photo {
     max-width: 50%;
+    height: 50vh;
     float: left;
-    position: absolute;
-    height: 40%;
+    margin-left: -2%;
+    margin-right: 30px;
   }
 
   .personal-info .author-info {
     max-width: 90%;
-    margin-top: 10vh;
+    display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 14%;
     padding: 10% 8%;
   }
 
@@ -304,16 +305,41 @@ body {
   }
 }
 
-@media (max-width: 719px) {
+@media (max-width: 714px) {
   .my-work {
-    min-height: 500vh;
+    height: 530vh;
   }
 
   .contact {
     display: block;
   }
 
+  .contact-details > * {
+    margin-bottom: 4%;
+  }
+
   .contact .contact-details {
-    width: 100%;
+    max-width: 100%;
+    font-size: 1.5em;
+  }
+
+  .contact .contact-photo {
+    max-width: 100%;
+  }
+
+  .contact .contact-icons {
+    margin-top: 8%;
+  }
+}
+
+@media (max-width: 600px) {
+  .personal-info .author-photo {
+    height: 45vh;
+  }
+}
+
+@media (max-width: 500px) {
+  .personal-info .author-photo {
+    height: 40vh;
   }
 }
