@@ -17,7 +17,7 @@ body {
 .personal-info {
   min-height: 80vh;
   display: flex;
-  padding: 4% 5%;
+  padding: 8vh 5%;
   flex-wrap: wrap;
   background:
     linear-gradient(135deg, rgba(48, 148, 181, 0.914) 26%, transparent 26%),
@@ -33,7 +33,7 @@ body {
 
 .personal-info .author-name {
   position: absolute;
-  font-size: 86px;
+  font-size: 5rem;
   z-index: 2;
   left: 6%;
   top: calc(80vh - 20%);
@@ -62,7 +62,7 @@ body {
 
 .author-info p {
   margin-top: 0;
-  margin-bottom: 8%;
+  margin-bottom: 0;
 }
 
 .author-info .author-icons {
@@ -78,8 +78,8 @@ body {
 }
 
 .my-work {
-  height: 82vw;
-  padding: 4% 5%;
+  min-height: 140vh;
+  padding: 8vh 5%;
   display: flex;
   flex-direction: column;
 }
@@ -156,7 +156,7 @@ body {
 .contact {
   min-height: 70vh;
   display: flex;
-  padding: 4% 5%;
+  padding: 8vh 5%;
   gap: 3%;
   flex-wrap: wrap;
   background-color: rgba(48, 148, 181, 0.914);
@@ -188,7 +188,7 @@ body {
 }
 
 .contact-details h1 {
-  margin-bottom: 8%;;
+  margin-bottom: 8%;
 }
 
 .contact-info .phone,
@@ -219,4 +219,101 @@ body {
 .contact-icons img {
   height: 50px;
   width: 50px;
+}
+
+@media (max-width: 1375px) {
+  .personal-info .author-name {
+    font-size: 4.1em;
+  }
+}
+
+@media (max-width: 1113px) {
+  .personal-info .author-name {
+    font-size: 3.3em;
+    top: calc(80vh - 17%);
+  }
+
+  .my-work {
+    min-height: 210vh;
+  }
+
+  .contact .contact-details {
+    max-width: 40%;
+  }
+
+  .contact .contact-photo {
+    max-width: 55%;
+  }
+}
+
+@media (max-width: 910px) {
+  .personal-info .author-name {
+    font-size: 2.8em;
+  }
+
+  .my-work {
+    min-height: 185vh;
+  }
+
+  .contact .contact-details {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .personal-info {
+    display: block;
+  }
+
+  .personal-info .author-photo {
+    max-width: 50%;
+    float: left;
+    position: absolute;
+    height: 40%;
+  }
+
+  .personal-info .author-info {
+    max-width: 90%;
+    margin-top: 10vh;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10% 8%;
+  }
+
+  .author-info h2 {
+    margin-bottom: 6%;
+  }
+
+  .personal-info .author-name {
+    font-size: 3.5em;
+    top: 8vh;
+    left: auto;
+    right: 5%;
+  }
+
+  .personal-info .author-icons {
+    display: none;
+  }
+
+  .contact .contact-details {
+    max-width: 45%;
+  }
+
+  .contact .contact-photo {
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 719px) {
+  .my-work {
+    min-height: 500vh;
+  }
+
+  .contact {
+    display: block;
+  }
+
+  .contact .contact-details {
+    width: 100%;
+  }
 }
